@@ -78,11 +78,13 @@ const App: React.VFC = () => {
   }, []);
 
   return (
-    <DataEditor
-      getCellContent={getContent}
-      columns={columns}
-      rows={data.length}
-    />
+    <DataEditorContainer width={800} height={500}>
+      <DataEditor
+        getCellContent={getContent}
+        columns={columns}
+        rows={data.length}
+      />
+    </DataEditorContainer>
   );
 };
 
